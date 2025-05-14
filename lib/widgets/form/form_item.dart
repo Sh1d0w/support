@@ -257,6 +257,7 @@ class NyFormItem extends StatelessWidget {
           controller: textEditingController,
           hintText: field.name,
           textCapitalization: textCapitalization,
+          focusNode: field.cast.getMetaData("focusNode") as FocusNode?,
           onChanged:
               ((field.cast.type ?? "").contains("currency")) ? null : onChanged,
           autoFocus: field.autofocus,
@@ -281,6 +282,7 @@ class NyFormItem extends StatelessWidget {
             controller: textEditingController,
             hintText: field.name,
             textCapitalization: textCapitalization,
+            focusNode: field.cast.getMetaData("focusNode") as FocusNode?,
             onChanged: ((field.cast.type ?? "").contains("currency"))
                 ? null
                 : onChanged,
